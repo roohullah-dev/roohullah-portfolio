@@ -2,18 +2,22 @@
   "name": "roohani-portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://roohullah-dev.github.io/roohani-portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.18",
     "@tsparticles/engine": "^3.9.1",
     "framer-motion": "^12.29.2",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.563.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
