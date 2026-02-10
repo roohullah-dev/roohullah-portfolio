@@ -1,0 +1,62 @@
+// import Navbar from "./components/Navbar";
+// import Hero from "./components/Hero";
+// import About from "./components/About";
+// import Skills from "./components/Skills";
+// import Projects from "./components/Projects";
+// import Footer from "./components/Footer";
+// import Technologies from "./components/Technologies";
+// import Testimonial from "./components/Testimonial";
+// import Services from "./components/Services";
+// import Contact from "./components/Contact";
+
+// export default function App() {
+//   return (
+//     <>
+//       <Navbar />
+//       <Hero />
+//       <About />
+//       <Skills />
+//       <Projects />
+//       <Technologies />
+//       <Testimonial />
+//       <Services />
+//       <Contact />
+
+//       <Footer />
+//     </>
+//   );
+// }
+
+// src/App.jsx (Simplified version)
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+import Technologies from "./components/Technologies";
+import Testimonial from "./components/Testimonial";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import ParticlesBackground from "./components/ParticlesBackground"; // Import new component
+
+export default function App() {
+  return (
+    // Body should be black or dark for this effect to look good
+    // Ensure your global CSS sets body background-color: #000;
+    <>
+      <ParticlesBackground /> {/* This replaces the gradient-bg div */}
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Technologies />
+      <Services />
+      <Testimonial />
+      <Contact />
+      <Footer />
+      {/* Footer component */}
+    </>
+  );
+}
