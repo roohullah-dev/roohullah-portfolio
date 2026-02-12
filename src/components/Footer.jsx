@@ -89,8 +89,7 @@ export default function Footer() {
               <FaEnvelope size={22} />
             </a>
           </div>
-
-          <p className="text-gray-500 text-sm mt-6 text-center md:text-left">
+          <p className="text-gray-500 text-sm mt-6 text-center md:text-left  border-t border-white/10 w-full p-2">
             © {new Date().getFullYear()} Roohullah. All rights reserved.
           </p>
         </div>

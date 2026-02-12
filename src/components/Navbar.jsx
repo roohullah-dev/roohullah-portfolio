@@ -95,7 +95,7 @@ export default function Navbar() {
             rounded-lg 
             text-xs lg:text-sm 
             font-medium 
-            hover:opacity-90 hover:bg-emerald-500 hover:text-white 
+            hover:opacity-90 hover:bg-green-400 hover:text-white 
             shadow-md hover:shadow-green-400/40 
             transition transform cursor-pointer
           "

@@ -32,7 +32,7 @@ const technologies = [
 export default function Technologies() {
   return (
     <section id="technologies" className="relative z-10 bg-black/80 py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-5">
         {/* Section Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function Technologies() {
         </motion.h2>
 
         {/* Technologies Grid */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6">
           {technologies.map((tech, idx) => (
             <motion.div
               key={tech.name}
