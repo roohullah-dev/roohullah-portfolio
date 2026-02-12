@@ -1,6 +1,49 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
+  const titles = [
+    "Front-End Developer",
+    "Python Automation Expert",
+    "Web Scraping Specialist",
+    "YouTube Automation Expert",
+    "Freelancer",
+  ];
+
+  const longestTitle = titles.reduce(
+    (a, b) => (a.length > b.length ? a : b),
+    "",
+  );
+
+  const [text, setText] = useState("");
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentTitle = titles[titleIndex];
+    let timeout;
+
+    if (!isDeleting && charIndex < currentTitle.length) {
+      timeout = setTimeout(() => {
+        setText(currentTitle.slice(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      }, 70);
+    } else if (isDeleting && charIndex > 0) {
+      timeout = setTimeout(() => {
+        setText(currentTitle.slice(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+      }, 40);
+    } else if (!isDeleting && charIndex === currentTitle.length) {
+      timeout = setTimeout(() => setIsDeleting(true), 1500);
+    } else if (isDeleting && charIndex === 0) {
+      setIsDeleting(false);
+      setTitleIndex((prev) => (prev + 1) % titles.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, titleIndex]);
+
   return (
     <section
       id="hero"
@@ -37,15 +80,26 @@ export default function Hero() {
             ⭐ React Developer & UI/UX Enthusiast
           </span>
 
-          {/* Heading */}
+          {/* Heading (NO JUMP FIXED) */}
           <h1
             className="
-              text-3xl sm:text-4xl md:text-5xl xl:text-6xl 
-              font-bold leading-tight 
-              mb-6
+              relative
+              min-h-[2.5rem] sm:min-h-[3.5rem] md:min-h-[4.5rem] xl:min-h-[5rem]
+              text-3xl sm:text-4xl md:text-5xl xl:text-5xl
+              font-bold leading-tight
+              mb-4 
             "
           >
-            Front-End Developer & Python Automation Specialist
+            {/* Invisible width holder */}
+            <span className="absolute invisible whitespace-nowrap">
+              {longestTitle}
+            </span>
+
+            {/* Visible typing text */}
+            <span className="block break-words">
+              {text}
+              <span className="text-green-400 animate-pulse">|</span>
+            </span>
           </h1>
 
           {/* Description */}
@@ -64,25 +118,41 @@ export default function Hero() {
             seamless digital solutions that save time and drive results.
           </p>
 
-          {/* CTA */}
-          <a
-            href="/Roohullah_CV.pdf"
-            download
-            className="
-              bg-white text-black 
-              px-4 py-3 
-              rounded-lg text-sm font-medium 
-              hover:opacity-90 hover:bg-emerald-500 hover:text-white 
-              shadow-md hover:shadow-green-400/40 
-              transition transform cursor-pointer 
-              mb-12 
-              w-full sm:w-52 
-              mx-auto md:mx-0 
-              text-center
-            "
-          >
-            Download CV
-          </a>
+          {/* CTA BUTTONS */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-12 w-full sm:w-auto mx-auto md:mx-0">
+            <a
+              href="/Roohullah_CV.pdf"
+              download
+              className="
+                bg-white text-black 
+                px-4 py-3 
+                rounded-lg text-sm font-medium 
+                hover:opacity-90 hover:bg-emerald-500 hover:text-white 
+                shadow-md hover:shadow-green-400/40 
+                transition transform cursor-pointer 
+                w-full sm:w-52 
+                text-center
+              "
+            >
+              Download CV
+            </a>
+
+            <a
+              href="mailto:your-email@example.com?subject=Hiring Inquiry&body=Hi Roohullah,%0D%0AI would like to hire you for a project."
+              className="
+                border border-green-400 text-green-400 
+                px-4 py-3 
+                rounded-lg text-sm font-medium 
+                hover:bg-green-400 hover:text-black 
+                shadow-md hover:shadow-green-400/40 
+                transition transform cursor-pointer 
+                w-full sm:w-52 
+                text-center
+              "
+            >
+              Hire Me
+            </a>
+          </div>
 
           {/* Stats */}
           <div
@@ -112,7 +182,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* RIGHT IMAGE / MOCK */}
+        {/* RIGHT IMAGE / MOCK (UNCHANGED) */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -142,7 +212,6 @@ export default function Hero() {
                 to-emerald-600/40
               "
             >
-              {/* Moving Edge Light */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
                 <div
                   className="
@@ -155,7 +224,6 @@ export default function Hero() {
                 ></div>
               </div>
 
-              {/* Main Card */}
               <div
                 className="
                   relative rounded-3xl overflow-hidden 
@@ -166,7 +234,6 @@ export default function Hero() {
                   shadow-[0_0_35px_rgba(16,185,129,0.12)]
                 "
               >
-                {/* Glass Overlay */}
                 <div
                   className="
                     absolute inset-0 
@@ -182,7 +249,6 @@ export default function Hero() {
                   className="w-full h-full object-cover hover:scale-105 transition duration-700"
                 />
 
-                {/* Status Badge */}
                 <div
                   className="
                     absolute top-4 right-4 
@@ -198,7 +264,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Floating Tech Badge */}
           <div
             className="
               absolute -bottom-6 sm:bottom-6 

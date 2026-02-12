@@ -91,17 +91,11 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`
-                px-4 sm:px-5 py-2
-                rounded-full font-medium
-                text-xs sm:text-sm
-                transition whitespace-nowrap
-                ${
-                  filter === cat
-                    ? "bg-green-500 text-black"
-                    : "bg-white/10 text-green-400 hover:bg-green-500/20"
-                }
-              `}
+              className={`px-4 sm:px-5 py-2 rounded-full font-medium text-xs sm:text-sm transition whitespace-nowrap ${
+                filter === cat
+                  ? "bg-green-500 text-black"
+                  : "bg-white/10 text-green-400 hover:bg-green-500/20"
+              }`}
             >
               {cat}
             </button>
@@ -113,41 +107,33 @@ export default function Projects() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="
-            grid gap-6 sm:gap-8
-            grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-3
-          "
+          className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
           {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
-              whileHover={{ scale: 1.05 }}
-              className="
-                relative rounded-2xl overflow-hidden
-                bg-white/5 border border-white/10
-                cursor-pointer
-              "
+              className="relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group"
             >
-              {/* Category Badge */}
-              <span className="absolute top-4 left-4 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium z-10">
-                {project.category}
-              </span>
-
               {/* Project Image */}
               <img
                 src={project.img}
                 alt={project.title}
-                className="w-full h-56 sm:h-60 lg:h-64 object-cover"
+                className="w-full h-56 sm:h-60 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
-              {/* Overlay */}
-              <div className="absolute bottom-0 left-0 w-full bg-black/70 px-4 py-4 text-white">
-                <h3 className="font-semibold text-base sm:text-lg">
+              {/* Sliding Overlay */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 p-6">
+                {/* Dark layer behind text */}
+                <div className="absolute inset-0 bg-black/60 backdrop-blur-sm rounded-2xl"></div>
+
+                {/* Content */}
+                <span className="absolute top-4 left-1/2 -translate-x-1/2 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium z-10">
+                  {project.category}
+                </span>
+                <h3 className="text-white font-semibold text-lg sm:text-xl z-10">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 text-xs sm:text-sm mt-1">
+                <p className="text-gray-200 text-sm sm:text-base mt-2 z-10">
                   {project.description}
                 </p>
               </div>
