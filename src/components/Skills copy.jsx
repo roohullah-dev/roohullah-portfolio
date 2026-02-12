@@ -129,36 +129,25 @@ const getLevelColor = (level) => {
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="relative z-10 bg-black/80 py-16 sm:py-20 lg:py-28"
-    >
+    <section id="skills" className="relative z-10 bg-black/80 py-24">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center px-4 sm:px-6"
+        className="text-center px-4"
       >
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
           Skills <span className="text-emerald-500">& Expertise</span>
         </h2>
-        <p className="mt-4 text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+        <p className="mt-3 text-sm text-gray-400 max-w-2xl mx-auto">
           Technologies and tools I master to build scalable and modern products.
         </p>
       </motion.div>
 
       {/* Skills Grid */}
-      <div
-        className="
-          mx-auto mt-12 sm:mt-16
-          max-w-7xl
-          grid gap-6
-          px-4 sm:px-6 lg:px-10
-          grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-        "
-      >
+      <div className="mx-auto mt-16 max-w-7xl grid gap-4 px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {skillGroups.map((group, groupIndex) => (
           <motion.div
             key={group.title}
@@ -166,35 +155,22 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: groupIndex * 0.2 }}
             viewport={{ once: true }}
-            className="
-              rounded-2xl
-              border border-white/10
-              bg-white/5
-              backdrop-blur-xl
-              p-5 sm:p-6
-              shadow-lg
-              hover:shadow-[0_0_80px_rgba(0,255,140,0.2)]
-              transform hover:-translate-y-1
-              transition-all duration-300
-            "
+            className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 shadow-lg hover:shadow-[0_0_80px_rgba(0,255,140,0.2)] transform hover:-translate-y-1 transition-all duration-300"
           >
-            <h3 className="mb-6 text-base sm:text-lg font-semibold text-white">
-              {group.title}
-            </h3>
+            <h3 className="mb-6 text-lg font-semibold ">{group.title}</h3>
 
             <div className="space-y-6">
               {group.skills.map((skill, skillIndex) => (
                 <div key={skill.name}>
-                  <div className="flex justify-between items-start mb-2 gap-3">
-                    <div className="text-xs sm:text-sm text-gray-100">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="text-xs text-gray-100">
                       {skill.name}
                       <div className="text-[10px] text-gray-500">
                         {skill.experience}
                       </div>
                     </div>
-
                     <span
-                      className={`px-2 py-0.5 rounded-full text-[10px] font-semibold whitespace-nowrap
+                      className={`px-2 py-0.5 rounded-full text-[10px] font-semibold
                       ${
                         skill.levelText === "Expert"
                           ? "bg-green-500 text-white"
@@ -217,9 +193,7 @@ export default function Skills() {
                         ease: "easeOut",
                       }}
                       viewport={{ once: true }}
-                      className={`h-full rounded-full bg-gradient-to-r ${getLevelColor(
-                        skill.levelText,
-                      )}`}
+                      className={`h-full rounded-full  bg-gradient-to-r ${getLevelColor(skill.levelText)}`}
                     />
                   </div>
                 </div>
