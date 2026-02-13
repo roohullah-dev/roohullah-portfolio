@@ -30,3 +30,39 @@ html {
 .animate-spin-slow {
   animation: spin-slow 5s linear infinite;
 }
+
+
+@keyframes pulseSoft {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(34, 197, 94, 0.4);
+  }
+
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(34, 197, 94, 0.4);
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 4s ease-in-out infinite;
+}
+
+.icon-style {
+  width: 44px;
+  height: 44px;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  color: #4ade80;
+  backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}

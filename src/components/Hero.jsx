@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 
 const roles = [
-  "Full-Stack Developer",
   "Front-End Specialist",
   "Python Automation Engineer",
   "Web Scraping Engineer",
   "Software Developer",
+  "Freelancer",
 ];
 
 export default function Hero() {
@@ -57,7 +58,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-black pt-28 pb-16 overflow-hidden"
+      className="relative bg-black/80 pt-28 pb-16 overflow-hidden"
     >
       <div
         className="
@@ -80,29 +81,12 @@ export default function Hero() {
             👋 Hello, I'm Roohullah
           </span>
 
-          {/* Title (Reduced + Proper Scaling) */}
-          {/* <h1
-            className="
-              text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl
-              font-bold text-white
-              leading-tight
-              mb-6
-              break-words
-            "
-          >
-            I Build Modern <br className="hidden sm:block" />
-            <span className="text-green-400">
-              {text}
-              <span className="animate-pulse">|</span>
-            </span>
-          </h1> */}
           <h1 className="relative z-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white py-4">
             <span className="text-green-400 block max-w-full truncate">
               {text}
               <span className="animate-pulse">|</span>
             </span>
           </h1>
-
           {/* Paragraph */}
           <p className="text-gray-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed mb-8">
             I’m a Front-End Developer and Python Automation & Web Scraping
@@ -110,7 +94,6 @@ export default function Hero() {
             web scraping and email to file management — delivering efficient,
             seamless digital solutions that save time and drive results.
           </p>
-
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <motion.a
@@ -132,37 +115,25 @@ export default function Hero() {
               Hire Me
             </motion.button>
           </div>
-
-          {/* Stats */}
-          {/* <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center lg:text-left">
-            {[
-              { value: "3+", label: "Years Experience" },
-              { value: "20+", label: "Projects Completed" },
-              { value: "10+", label: "Technologies" },
-              { value: "98%", label: "Client Satisfaction" },
-            ].map((item) => (
-              <div key={item.label}>
-                <h3 className="text-xl sm:text-2xl text-green-400 font-semibold bg-amber-700">
-                  {item.value}
-                </h3>
-                <p className="text-gray-500 text-xs sm:text-sm">{item.label}</p>
-              </div>
-            ))}
-          </div> */}
           {/* Stats */}
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             {[
-              { value: "3+", label: "Years Experience" },
-              { value: "20+", label: "Projects Completed" },
-              { value: "10+", label: "Technologies" },
-              { value: "98%", label: "Client Satisfaction" },
+              { value: 3, suffix: "+", label: "Years Experience" },
+              { value: 20, suffix: "+", label: "Projects Completed" },
+              { value: 10, suffix: "+", label: "Technologies" },
+              { value: 98, suffix: "%", label: "Client Satisfaction" },
             ].map((item) => (
               <div
                 key={item.label}
                 className="flex flex-col items-center justify-center"
               >
                 <h3 className="text-xl sm:text-2xl text-green-400 font-semibold px-3 py-1 rounded">
-                  {item.value}
+                  <CountUp
+                    start={0}
+                    end={item.value}
+                    duration={2}
+                    suffix={item.suffix}
+                  />
                 </h3>
                 <p className="text-gray-500 text-xs sm:text-sm whitespace-nowrap">
                   {item.label}
@@ -179,23 +150,79 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex justify-center lg:justify-end"
         >
-          <div className="relative w-[280px] sm:w-[330px] md:w-[380px] lg:w-[420px]">
-            {/* Glow */}
-            <div className="absolute inset-0 rounded-2xl bg-green-500/20 blur-3xl"></div>
+          <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square">
+            {/* Soft Green Glow */}
+            <div className="absolute inset-0 rounded-full bg-green-500/20 blur-3xl scale-110"></div>
 
-            <img
-              src="/RoohullahPic.JPG"
-              alt="Roohullah"
-              className="
-                relative
-                w-full
-                h-[380px] sm:h-[430px] md:h-[480px]
-                object-cover
-                rounded-2xl
-                border border-white/10
-                shadow-2xl
-              "
-            />
+            {/* Green Gradient Arc Ring */}
+            <div
+              className="absolute inset-0 rounded-full border-[6px] border-transparent
+      bg-[conic-gradient(from_180deg_at_50%_50%,#22c55e,#16a34a,#15803d,#22c55e)]
+      mask-[radial-gradient(farthest-side,transparent_calc(100%-6px),black_0)]
+    "
+            ></div>
+
+            {/* Profile Image */}
+            <div className="absolute inset-[14px] rounded-full overflow-hidden border border-green-400/30 shadow-2xl">
+              <img
+                src="/RoohullahPic.JPG"
+                alt="Roohullah"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* ICON WRAPPER */}
+            <div className="absolute inset-0">
+              {/* Top */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="icon-style animate-pulse-soft">📩</div>
+              </div>
+
+              {/* 60° */}
+              <div className="absolute w-full h-full rotate-[60deg]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-60deg]">
+                  <div className="icon-style animate-pulse-soft delay-200">
+                    💻
+                  </div>
+                </div>
+              </div>
+
+              {/* 120° */}
+              <div className="absolute w-full h-full rotate-[120deg]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-120deg]">
+                  <div className="icon-style animate-pulse-soft delay-400">
+                    📊
+                  </div>
+                </div>
+              </div>
+
+              {/* 180° */}
+              <div className="absolute w-full h-full rotate-[180deg]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-180deg]">
+                  <div className="icon-style animate-pulse-soft delay-600">
+                    📱
+                  </div>
+                </div>
+              </div>
+
+              {/* 240° */}
+              <div className="absolute w-full h-full rotate-[240deg]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-240deg]">
+                  <div className="icon-style animate-pulse-soft delay-800">
+                    ⚙️
+                  </div>
+                </div>
+              </div>
+
+              {/* 300° */}
+              <div className="absolute w-full h-full rotate-[300deg]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-300deg]">
+                  <div className="icon-style animate-pulse-soft delay-1000">
+                    🌐
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

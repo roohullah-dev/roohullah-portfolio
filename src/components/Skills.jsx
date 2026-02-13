@@ -23,7 +23,7 @@ const skillGroups = [
         levelPercent: 90,
       },
       {
-        name: "Next.js",
+        name: "Bootstrap",
         experience: "2+ years",
         levelText: "Intermediate",
         levelPercent: 70,
@@ -35,77 +35,98 @@ const skillGroups = [
         levelPercent: 85,
       },
       {
-        name: "TypeScript",
-        experience: "2+ years",
-        levelText: "Intermediate",
-        levelPercent: 65,
-      },
-    ],
-  },
-  {
-    title: "Backend / APIs",
-    skills: [
-      {
-        name: "Node.js",
-        experience: "2+ years",
-        levelText: "Intermediate",
-        levelPercent: 70,
-      },
-      {
-        name: "Express.js",
-        experience: "2+ years",
-        levelText: "Intermediate",
-        levelPercent: 65,
-      },
-      {
-        name: "REST APIs",
-        experience: "3+ years",
-        levelText: "Expert",
-        levelPercent: 85,
-      },
-      {
-        name: "MongoDB",
-        experience: "2+ years",
-        levelText: "Intermediate",
-        levelPercent: 60,
-      },
-      {
-        name: "Authentication (JWT)",
-        experience: "2+ years",
-        levelText: "Intermediate",
-        levelPercent: 60,
-      },
-    ],
-  },
-  {
-    title: "Tools & Others",
-    skills: [
-      {
         name: "Git / GitHub",
         experience: "3+ years",
         levelText: "Expert",
         levelPercent: 90,
       },
       {
-        name: "Docker",
-        experience: "1+ years",
+        name: "Performance Optimization",
+        experience: "2+ years",
         levelText: "Intermediate",
-        levelPercent: 50,
+        levelPercent: 70,
+      },
+    ],
+  },
+
+  {
+    title: "Python Automation & Web Scraping",
+    skills: [
+      {
+        name: "Python",
+        experience: "3+ years",
+        levelText: "Expert",
+        levelPercent: 90,
       },
       {
-        name: "CI / CD",
-        experience: "1+ years",
-        levelText: "Intermediate",
-        levelPercent: 50,
+        name: "Selenium WebDriver",
+        experience: "3+ years",
+        levelText: "Expert",
+        levelPercent: 85,
       },
       {
-        name: "Figma",
+        name: "Scrapy",
+        experience: "2+ years",
+        levelText: "Intermediate",
+        levelPercent: 70,
+      },
+      {
+        name: "Playwright",
+        experience: "1+ years",
+        levelText: "Intermediate",
+        levelPercent: 65,
+      },
+      {
+        name: "BeautifulSoup (bs4)",
         experience: "2+ years",
         levelText: "Intermediate",
         levelPercent: 65,
       },
       {
-        name: "Performance Optimization",
+        name: "Requests / API Automation",
+        experience: "2+ years",
+        levelText: "Intermediate",
+        levelPercent: 70,
+      },
+      {
+        name: "Email Automation (SMTP / IMAP)",
+        experience: "2+ years",
+        levelText: "Intermediate",
+        levelPercent: 65,
+      },
+    ],
+  },
+
+  {
+    title: "Professional Tools & Workflow",
+    skills: [
+      {
+        name: "Documentation & Reporting",
+        experience: "3+ years",
+        levelText: "Expert",
+        levelPercent: 85,
+      },
+      {
+        name: "UI Collaboration (Figma / Adobe XD)",
+        experience: "2+ years",
+        levelText: "Intermediate",
+        levelPercent: 65,
+      },
+      {
+        name: "Cloud / Hosting Platforms (Netlify, Vercel, Heroku)",
+        experience: "2+ years",
+        levelText: "Intermediate",
+        levelPercent: 65,
+      },
+      {
+        name: "Task Scheduling & Automation Tools",
+        experience: "2+ years",
+        levelText: "Intermediate",
+        levelPercent: 70,
+      },
+
+      {
+        name: "Excel / CSV / JSON Automation",
         experience: "2+ years",
         levelText: "Intermediate",
         levelPercent: 70,
@@ -117,13 +138,13 @@ const skillGroups = [
 const getLevelColor = (level) => {
   switch (level) {
     case "Expert":
-      return "from-green-400 to-emerald-500";
+      return "from-emerald-400 via-emerald-500 to-emerald-600";
     case "Intermediate":
-      return "from-yellow-400 to-yellow-600";
+      return "from-emerald-300 via-emerald-400 to-emerald-500";
     case "Advanced":
-      return "from-blue-400 to-blue-600";
+      return "from-emerald-500 via-emerald-600 to-emerald-700";
     default:
-      return "from-gray-400 to-gray-500";
+      return "from-emerald-400 to-emerald-500";
   }
 };
 
@@ -195,19 +216,23 @@ export default function Skills() {
 
                     <span
                       className={`px-2 py-0.5 rounded-full text-[10px] font-semibold whitespace-nowrap
-                      ${
-                        skill.levelText === "Expert"
-                          ? "bg-green-500 text-white"
-                          : skill.levelText === "Intermediate"
-                            ? "bg-emerald-800 text-white"
-                            : "bg-blue-500 text-white"
-                      }`}
+                     ${
+                       skill.levelText === "Expert"
+                         ? "bg-emerald-500 text-white"
+                         : skill.levelText === "Intermediate"
+                           ? "bg-emerald-700 text-white"
+                           : "bg-emerald-600 text-white"
+                     }
+`}
                     >
                       {skill.levelText}
                     </span>
                   </div>
 
-                  <div className="h-2 w-full rounded-full bg-white/10 overflow-hidden">
+                  <div
+                    className="h-2 w-full rounded-full bg-emerald-900/30
+ overflow-hidden"
+                  >
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.levelPercent}%` }}

@@ -57,10 +57,17 @@ export default function About() {
           >
             <p>
               I’m a Front-End Developer and Python Automation & Web Scraping
-              Specialist with 3 years of experience and a proven track record on
-              Fiverr since August 2022. I build modern websites and smart
-              automation systems that simplify tasks and deliver measurable
-              results.
+              Specialist with 3 years of experience and a proven track record on{" "}
+              <a
+                href="https://www.fiverr.com/YOUR_USERNAME"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-600 font-medium hover:underline hover:text-green-700 transition duration-300"
+              >
+                Fiverr
+              </a>{" "}
+              since August 2022. I build modern websites and smart automation
+              systems that simplify tasks and deliver measurable results.
             </p>
 
             <p>
