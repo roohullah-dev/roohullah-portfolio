@@ -111,8 +111,7 @@ export default function About() {
             ))}
           </div>
         </motion.div>
-
-        {/* RIGHT CARDS */}
+        RIGHT CARDS
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -121,8 +120,8 @@ export default function About() {
           className="grid gap-6"
         >
           {/* Expertise */}
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7">
-            <div className="flex items-center gap-3 mb-3 text-green-400">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-3 mb-3 text-green-400">
               <span className="text-lg">&lt;/&gt;</span>
               <h3 className="font-medium">Expertise</h3>
             </div>
@@ -132,10 +131,10 @@ export default function About() {
             </p>
           </div>
 
-          {/* small cards */}
+          {/* Small cards */}
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-              <div className="flex items-center gap-3 mb-3 text-green-400">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center sm:text-left">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-3 mb-3 text-green-400">
                 ✨<h3 className="font-medium">Clean Code</h3>
               </div>
               <p className="text-gray-400 text-sm">
@@ -143,8 +142,8 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-              <div className="flex items-center gap-3 mb-3 text-green-400">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center sm:text-left">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-3 mb-3 text-green-400">
                 ⚡<h3 className="font-medium">Performance</h3>
               </div>
               <p className="text-gray-400 text-sm">
@@ -153,25 +152,17 @@ export default function About() {
             </div>
           </div>
 
-          {/* bottom metrics */}
-          <div
-            className="
-              grid grid-cols-3
-              gap-4
-              bg-white/5 border border-white/10
-              rounded-2xl p-5 sm:p-6
-              text-center
-            "
-          >
-            <div>
+          {/* Bottom metrics */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6 text-center">
+            <div className="flex flex-col items-center">
               <h4 className="text-green-400 font-semibold text-lg">100%</h4>
               <p className="text-gray-500 text-xs">Client Satisfaction</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center">
               <h4 className="text-green-400 font-semibold text-lg">24/7</h4>
               <p className="text-gray-500 text-xs">Support</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center">
               <h4 className="text-green-400 font-semibold text-lg">Fast</h4>
               <p className="text-gray-500 text-xs">Delivery</p>
             </div>

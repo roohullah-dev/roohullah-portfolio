@@ -60,7 +60,6 @@ const services = [
     icon: <FaCodeBranch />,
   },
 ];
-
 export default function Services() {
   return (
     <section id="services" className="relative z-10 bg-black/80 py-24">
@@ -86,7 +85,8 @@ export default function Services() {
               whileHover={{ scale: 1.06, y: -5 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.07 }}
-              className="bg-gray-900/50 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-md hover:shadow-emerald-500/30 transition cursor-pointer"
+              className="bg-gray-900/50 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-md hover:shadow-emerald-500/30 transition cursor-pointer
+                         text-center sm:text-left items-center sm:items-start"
             >
               <div className="text-emerald-400 text-3xl">{service.icon}</div>
               <h3 className="text-lg font-semibold text-white">

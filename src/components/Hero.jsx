@@ -71,13 +71,13 @@ export default function Hero() {
       >
         {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
+          initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center lg:text-left"
+          className="text-center lg:text-left bg"
         >
           {/* Badge */}
-          <span className="inline-block  px-4 py-2 rounded-full bg-green-500/10 text-green-400 text-sm bg-amber-500">
+          <span className="inline-block  px-4 py-2 rounded-full bg-green-500/10 text-green-400 text-sm">
             👋 Hello, I'm Roohullah
           </span>
 
@@ -88,12 +88,16 @@ export default function Hero() {
             </span>
           </h1>
           {/* Paragraph */}
-          <p className=" font-body text-gray-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed mb-8 sm:mb-4 md:mb-6 sm:text-justify md:text-justify">
+          {/* <p className=" font-body text-gray-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed mb-8 sm:mb-4 md:mb-6 sm:text-justify md:text-justify">
+            
+          </p> */}
+          <p className="font-body text-gray-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed mb-8 sm:mb-4 md:mb-6 text-justify">
             I’m a Front-End Developer and Python Automation & Web Scraping
             Specialist. I build responsive websites and smart automation — from
             web scraping and email to file management — delivering efficient,
             seamless digital solutions that save time and drive results.
           </p>
+
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <motion.a
@@ -110,7 +114,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => handleScroll("contact")}
-              className="border border-green-400 text-green-400 px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-400 hover:text-black transition sm:w-full"
+              className="border border-green-400 text-green-400 px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-400 hover:text-black transition"
             >
               Hire Me
             </motion.button>
@@ -145,7 +149,7 @@ export default function Hero() {
 
         {/* RIGHT IMAGE (FIXED SIZE) */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
+          initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="flex justify-center lg:justify-end"
