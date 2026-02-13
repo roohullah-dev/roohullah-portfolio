@@ -156,7 +156,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex justify-center lg:justify-end"
+          className="flex justify-center lg:justify-end hidden"
         >
           <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square">
             {/* Soft Green Glow */}
