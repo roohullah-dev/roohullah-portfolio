@@ -44,7 +44,11 @@ export default function Technologies() {
         viewport={{ once: true }}
         className="text-center px-4 sm:px-6"
       >
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+        <h2
+          className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl
+              font-bold leading-snug
+              text-white mb-6"
+        >
           Technologies <span className="text-emerald-500">& Tools</span>
         </h2>
         <p className="mt-4 text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">

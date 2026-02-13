@@ -37,10 +37,14 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative z-10 bg-black/80 py-24">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2
+            className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl
+              font-bold leading-snug
+              text-white mb-6"
+          >
             Let’s Work <span className="text-emerald-500">Together</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
@@ -51,7 +55,7 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-10">
           {/* ================= FORM ================= */}
-          <div className={`${glass} p-8`}>
+          <div className={`${glass} p-4`}>
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>

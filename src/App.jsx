@@ -42,8 +42,6 @@ import ParticlesBackground from "./components/ParticlesBackground"; // Import ne
 
 export default function App() {
   return (
-    // Body should be black or dark for this effect to look good
-    // Ensure your global CSS sets body background-color: #000;
     <>
       <ParticlesBackground /> {/* This replaces the gradient-bg div */}
       <Navbar />

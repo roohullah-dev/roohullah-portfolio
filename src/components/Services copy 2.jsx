@@ -70,9 +70,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className=" text-2xl sm:text-4xl md:text-4xl lg:text-5xl
-              font-bold leading-snug
-              text-white mb-6 text-center tracking-wide"
+          className="text-3xl md:text-4xl font-bold text-white mb-14 text-center tracking-wide"
         >
           My <span className="text-emerald-500">Services</span>
         </motion.h2>

@@ -37,7 +37,7 @@ export default function About() {
 
           <h2
             className="
-              text-2xl sm:text-4xl md:text-4xl lg:text-5xl
+              text-3xl sm:text-4xl md:text-4xl lg:text-5xl
               font-bold leading-snug
               text-white mb-6
             "
@@ -52,7 +52,7 @@ export default function About() {
               text-gray-400 leading-relaxed
               max-w-xl
               mx-auto md:mx-0
-              text-sm sm:text-base text-justify
+              text-sm sm:text-base
             "
           >
             <p>
@@ -121,8 +121,8 @@ export default function About() {
           className="grid gap-6"
         >
           {/* Expertise */}
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 text-center sm:text-left">
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mb-3 text-green-400">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7">
+            <div className="flex items-center gap-3 mb-3 text-green-400">
               <span className="text-lg">&lt;/&gt;</span>
               <h3 className="font-medium">Expertise</h3>
             </div>
@@ -132,10 +132,10 @@ export default function About() {
             </p>
           </div>
 
-          {/* Small cards */}
+          {/* small cards */}
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center sm:text-left">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 mb-3 text-green-400">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-3 text-green-400">
                 ✨<h3 className="font-medium">Clean Code</h3>
               </div>
               <p className="text-gray-400 text-sm">
@@ -143,8 +143,8 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center sm:text-left">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start  gap-3 mb-3 text-green-400">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-3 text-green-400">
                 ⚡<h3 className="font-medium">Performance</h3>
               </div>
               <p className="text-gray-400 text-sm">
@@ -153,17 +153,25 @@ export default function About() {
             </div>
           </div>
 
-          {/* Bottom metrics */}
-          <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6 text-center">
-            <div className="flex flex-col items-center">
+          {/* bottom metrics */}
+          <div
+            className="
+              grid grid-cols-3
+              gap-4
+              bg-white/5 border border-white/10
+              rounded-2xl p-5 sm:p-6
+              text-center
+            "
+          >
+            <div>
               <h4 className="text-green-400 font-semibold text-lg">100%</h4>
               <p className="text-gray-500 text-xs">Client Satisfaction</p>
             </div>
-            <div className="flex flex-col items-center">
+            <div>
               <h4 className="text-green-400 font-semibold text-lg">24/7</h4>
               <p className="text-gray-500 text-xs">Support</p>
             </div>
-            <div className="flex flex-col items-center">
+            <div>
               <h4 className="text-green-400 font-semibold text-lg">Fast</h4>
               <p className="text-gray-500 text-xs">Delivery</p>
             </div>

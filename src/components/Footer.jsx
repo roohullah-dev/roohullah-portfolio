@@ -7,7 +7,7 @@ export default function Footer() {
           {/* About (Wider Column) */}
           <div className="flex-[2]">
             <h3 className="text-white text-xl font-bold mb-4">About Me</h3>
-            <p className="text-gray-400 text-left text-sm sm:text-base">
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-center">
               Crafting modern, responsive websites and intelligent automation
               solutions with precision and efficiency. From front-end
               development to Python-based automation and web scraping, I focus
@@ -83,13 +83,13 @@ export default function Footer() {
                 href="mailto:your@email.com"
                 className="hover:text-emerald-500"
               >
-                your@email.com
+                roohullahdev5@gmail.com
               </a>
             </p>
             <p className="text-gray-400 text-sm mb-2">
               <strong>Phone:</strong>{" "}
               <a href="tel:+1234567890" className="hover:text-emerald-500">
-                +123 456 7890
+                +93731945209
               </a>
             </p>
             <p className="text-gray-400 text-sm">
@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
 
         {/* Optional Footer Paragraph */}
-        <div className="mt-8 text-center text-gray-400 text-sm sm:text-base">
+        <div className="mt-8 text-center text-gray-600 font-bold text-sm sm:text-base">
           Delivering modern web solutions and intelligent automation that help
           businesses save time and achieve more.
         </div>

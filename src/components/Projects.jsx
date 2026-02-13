@@ -25,6 +25,7 @@ const projectsData = [
       "A full stack blogging platform with authentication, posts, and comments.",
     img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
   },
+
   {
     id: 4,
     title: "Portfolio Website",
@@ -32,12 +33,83 @@ const projectsData = [
     description: "A personal portfolio website showcasing projects and skills.",
     img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
   },
+
   {
     id: 5,
-    title: "Portfolio Website",
+    title: "Youtube Multiple Downloader",
     category: "Python Automation & Scraping",
     description: "A personal portfolio website showcasing projects and skills.",
     img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+  },
+
+  {
+    id: 6,
+    title: "Amazon Scraping Engine",
+    category: "Python Automation & Scraping",
+    description: "A personal portfolio website showcasing projects and skills.",
+    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+  },
+
+  {
+    id: 7,
+    title: "Ali Express Scraping Tool",
+    category: "Python Automation & Scraping",
+    description: "A personal portfolio website showcasing projects and skills.",
+    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+  },
+
+  {
+    id: 8,
+    title: "UltraCodeX Custom Script",
+    category: "Python Automation & Scraping",
+    description: "A personal portfolio website showcasing projects and skills.",
+    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+  },
+  {
+    id: 10,
+    title: "Auto Email Reminder",
+    category: "Python Automation & Scraping",
+    description: "A personal portfolio website showcasing projects and skills.",
+    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+  },
+
+  {
+    id: 11,
+    title: "Full Stack Blog",
+    category: "Interactive Web Apps",
+    description:
+      "A full stack blogging platform with authentication, posts, and comments.",
+    img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
+  },
+  {
+    id: 12,
+    title: "Full Stack Blog",
+    category: "Interactive Web Apps",
+    description:
+      "A full stack blogging platform with authentication, posts, and comments.",
+    img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
+  },
+
+  {
+    id: 13,
+    title: "Dashboard UI Kit",
+    category: "UI Components",
+    description: "A clean and reusable dashboard UI kit for fast prototyping.",
+    img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
+  },
+  {
+    id: 14,
+    title: "Dashboard UI Kit",
+    category: "UI Components",
+    description: "A clean and reusable dashboard UI kit for fast prototyping.",
+    img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
+  },
+  {
+    id: 15,
+    title: "Dashboard UI Kit",
+    category: "UI Components",
+    description: "A clean and reusable dashboard UI kit for fast prototyping.",
+    img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
   },
 ];
 
@@ -69,7 +141,11 @@ export default function Projects() {
           transition={{ duration: 0.7 }}
           className="text-center mb-12 sm:mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2
+            className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl
+              font-bold leading-snug
+              text-white mb-6"
+          >
             My <span className="text-emerald-500">Projects</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">

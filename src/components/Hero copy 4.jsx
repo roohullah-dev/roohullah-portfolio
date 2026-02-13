@@ -56,13 +56,9 @@ export default function Hero() {
   };
 
   return (
-    // <section
-    //   id="hero"
-    //   className="relative bg-black/80 pt-28 pb-16 overflow-hidden"
-    // >
     <section
       id="hero"
-      className="relative bg-black/80 pt-28 pb-16 overflow-hidden sm:overflow-visible"
+      className="relative bg-black/80 pt-28 pb-16 overflow-hidden"
     >
       <div
         className="
