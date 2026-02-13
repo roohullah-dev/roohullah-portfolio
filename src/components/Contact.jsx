@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Mail, MapPin, Linkedin, Twitter, Github, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import {
   FaWhatsapp,
   FaFacebook,

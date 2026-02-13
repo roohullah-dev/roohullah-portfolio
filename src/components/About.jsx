@@ -32,7 +32,7 @@ export default function About() {
               mx-auto md:mx-0
             "
           >
-            &lt;/&gt; Full-Stack Developer
+            &lt;/&gt; Front-end Developer
           </span>
 
           <h2
