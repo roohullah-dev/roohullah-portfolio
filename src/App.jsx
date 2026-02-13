@@ -29,7 +29,7 @@
 
 // src/App.jsx (Simplified version)
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -45,7 +45,7 @@ export default function App() {
     <>
       <ParticlesBackground /> {/* This replaces the gradient-bg div */}
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
       <About />
       <Skills />
       <Projects />
