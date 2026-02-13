@@ -77,18 +77,18 @@ export default function Hero() {
           className="text-center lg:text-left"
         >
           {/* Badge */}
-          <span className="inline-block  px-4 py-2 rounded-full bg-green-500/10 text-green-400 text-sm">
+          <span className="inline-block  px-4 py-2 rounded-full bg-green-500/10 text-green-400 text-sm bg-amber-500">
             👋 Hello, I'm Roohullah
           </span>
 
-          <h1 className="relative z-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white py-4">
-            <span className="text-green-400 block max-w-full truncate">
+          <h1 className="font-heading relative z-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white py-4">
+            <span className="font-heading block max-w-full truncate">
               {text}
               <span className="animate-pulse">|</span>
             </span>
           </h1>
           {/* Paragraph */}
-          <p className="text-gray-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed mb-8">
+          <p className=" font-body text-gray-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed mb-8 sm:mb-4 md:mb-6 sm:text-justify md:text-justify">
             I’m a Front-End Developer and Python Automation & Web Scraping
             Specialist. I build responsive websites and smart automation — from
             web scraping and email to file management — delivering efficient,
@@ -110,13 +110,13 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => handleScroll("contact")}
-              className="border border-green-400 text-green-400 px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-400 hover:text-black transition"
+              className="border border-green-400 text-green-400 px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-400 hover:text-black transition sm:w-full"
             >
               Hire Me
             </motion.button>
           </div>
           {/* Stats */}
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center sm:mt-6 md:mt-7 sm:gap-3 md:gap-4">
             {[
               { value: 3, suffix: "+", label: "Years Experience" },
               { value: 20, suffix: "+", label: "Projects Completed" },
@@ -150,7 +150,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex justify-center lg:justify-end"
         >
-          <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square">
+          <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square bg-amber-900">
             {/* Soft Green Glow */}
             <div className="absolute inset-0 rounded-full bg-green-500/20 blur-3xl scale-110"></div>
 

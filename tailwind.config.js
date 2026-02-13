@@ -9,3 +9,14 @@ extend: {
     },
   },
 }
+
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        heading: ['Poppins', 'sans-serif'], // For headings
+        body: ['Inter', 'sans-serif'],      // For paragraphs
+      },
+    },
+  },
+};
