@@ -62,7 +62,7 @@ export default function Hero() {
     // >
     <section
       id="hero"
-      className="relative bg-black/80 pt-28 pb-16 overflow-hidden sm:overflow-visible"
+      className="relative bg-black/80 pt-28 pb-16 overflow-hidden"
     >
       <div
         className="
@@ -158,7 +158,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex justify-center lg:justify-end"
         >
-          <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square">
+          <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square overflow-hidden">
             {/* Soft Green Glow */}
             <div className="absolute inset-0 rounded-full bg-green-500/20 blur-3xl scale-110"></div>
 
@@ -180,9 +180,13 @@ export default function Hero() {
             </div>
 
             {/* ICON WRAPPER */}
-            <div className="absolute inset-0">
+            {/* <div className="absolute inset-0"> */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden">
               {/* Top */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div
+                className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[30%]
+"
+              >
                 <div className="icon-style animate-pulse-soft">📩</div>
               </div>
 
