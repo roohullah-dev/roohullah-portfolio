@@ -56,10 +56,6 @@ export default function Hero() {
   };
 
   return (
-    // <section
-    //   id="hero"
-    //   className="relative bg-black/80 pt-28 pb-16 overflow-hidden"
-    // >
     <section
       id="hero"
       className="relative bg-black/80 pt-28 pb-16 overflow-hidden"
@@ -158,7 +154,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex justify-center lg:justify-end"
         >
-          <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square overflow-hidden">
+          <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square">
             {/* Soft Green Glow */}
             <div className="absolute inset-0 rounded-full bg-green-500/20 blur-3xl scale-110"></div>
 
@@ -180,60 +176,24 @@ export default function Hero() {
             </div>
 
             {/* ICON WRAPPER */}
-            {/* <div className="absolute inset-0"> */}
-            <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              {/* Top */}
-              <div
-                className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[30%]
-"
-              >
-                <div className="icon-style animate-pulse-soft">📩</div>
-              </div>
-
-              {/* 60° */}
-              <div className="absolute w-full h-full rotate-[60deg]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-60deg]">
-                  <div className="icon-style animate-pulse-soft delay-200">
-                    💻
+            {/* ICON WRAPPER */}
+            <div className="absolute inset-0 pointer-events-none">
+              {[0, 60, 120, 180, 240, 300].map((angle, i) => (
+                <div
+                  key={angle}
+                  className="absolute inset-0"
+                  style={{ transform: `rotate(${angle}deg)` }}
+                >
+                  <div
+                    className="absolute left-1/2 top-0 -translate-x-1/2 translate-y-[-16px]"
+                    style={{ transform: `rotate(-${angle}deg)` }}
+                  >
+                    <div className="icon-style animate-pulse-soft">
+                      {["📩", "💻", "📊", "📱", "⚙️", "🌐"][i]}
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* 120° */}
-              <div className="absolute w-full h-full rotate-[120deg]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-120deg]">
-                  <div className="icon-style animate-pulse-soft delay-400">
-                    📊
-                  </div>
-                </div>
-              </div>
-
-              {/* 180° */}
-              <div className="absolute w-full h-full rotate-[180deg]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-180deg]">
-                  <div className="icon-style animate-pulse-soft delay-600">
-                    📱
-                  </div>
-                </div>
-              </div>
-
-              {/* 240° */}
-              <div className="absolute w-full h-full rotate-[240deg]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-240deg]">
-                  <div className="icon-style animate-pulse-soft delay-800">
-                    ⚙️
-                  </div>
-                </div>
-              </div>
-
-              {/* 300° */}
-              <div className="absolute w-full h-full rotate-[300deg]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-300deg]">
-                  <div className="icon-style animate-pulse-soft delay-1000">
-                    🌐
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </motion.div>
