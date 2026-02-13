@@ -77,3 +77,8 @@ html {
   height: 36px;
   max-width: 10vw;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}
