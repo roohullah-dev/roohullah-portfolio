@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-300">
+    <footer className=" bg-black/80 text-gray-300 relative before:absolute before:top-0 before:left-0 before:w-full before:h-6 before:shadow-[0_-8px_20px_rgba(0,0,0,0.5)] before:rounded-t-lg before:pointer-events-none">
       {/* Top Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12">
         <div className="flex flex-col lg:flex-row justify-between gap-12 text-center lg:text-left">
           {/* About (Wider Column) */}
           <div className="flex-[2]">
             <h3 className="text-white text-xl font-bold mb-4">About Me</h3>
-            <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-center">
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-left">
               Crafting modern, responsive websites and intelligent automation
               solutions with precision and efficiency. From front-end
               development to Python-based automation and web scraping, I focus

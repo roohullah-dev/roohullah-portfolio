@@ -1,6 +1,13 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Linkedin, Twitter, Github, Phone } from "lucide-react";
+import {
+  FaWhatsapp,
+  FaFacebook,
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+} from "react-icons/fa";
 
 const Contact = () => {
   const formRef = useRef();
@@ -134,19 +141,52 @@ const Contact = () => {
               </h3>
 
               <div className="space-y-5 text-gray-400 text-sm">
+                {/* Email */}
                 <div className="flex items-center gap-3">
                   <Mail className="text-emerald-400" size={18} />
-                  roohullahdev5@gmail.com
+                  <a
+                    href="mailto:roohullahdev5@gmail.com"
+                    className="hover:underline text-gray-400 transition-colors"
+                    onClick={(e) => {
+                      // Optional: open Gmail web if desktop mail fails
+                      if (
+                        typeof window !== "undefined" &&
+                        !navigator.userAgent.includes("Mobi")
+                      ) {
+                        e.preventDefault();
+                        window.open(
+                          "https://mail.google.com/mail/?view=cm&fs=1&to=roohullahdev5@gmail.com",
+                          "_blank",
+                        );
+                      }
+                    }}
+                  >
+                    roohullahdev5@gmail.com
+                  </a>
                 </div>
 
+                {/* Phone */}
                 <div className="flex items-center gap-3">
                   <Phone className="text-emerald-400" size={18} />
-                  +93731945209
+                  <a
+                    href="tel:+93731945209"
+                    className="hover:underline text-gray-400 transition-colors"
+                  >
+                    +93 731 945 209
+                  </a>
                 </div>
 
+                {/* Address / Map */}
                 <div className="flex items-center gap-3">
                   <MapPin className="text-emerald-400" size={18} />
-                  New Kabul City, Kabul, Afghanistan
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=New+Kabul+City,+Kabul,+Afghanistan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-gray-400 transition-colors"
+                  >
+                    New Kabul City, Kabul, Afghanistan
+                  </a>
                 </div>
               </div>
             </div>
@@ -156,31 +196,54 @@ const Contact = () => {
               <p className="text-gray-400 mb-6">Connect with me</p>
 
               <div className="flex gap-4">
+                {/* GitHub */}
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/roohullah-dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-800 rounded-lg hover:bg-emerald-500 hover:text-black transition hover:shadow-emerald-500/40 shadow-md"
                 >
-                  <Github size={20} />
+                  <FaGithub size={20} />
                 </a>
 
+                {/* LinkedIn */}
                 <a
                   href="https://linkedin.com/in/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-800 rounded-lg hover:bg-emerald-500 hover:text-black transition hover:shadow-emerald-500/40 shadow-md"
                 >
-                  <Linkedin size={20} />
+                  <FaLinkedin size={20} />
                 </a>
 
+                {/* Twitter */}
                 <a
-                  href="https://twitter.com"
+                  href="https://twitter.com/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-800 rounded-lg hover:bg-emerald-500 hover:text-black transition hover:shadow-emerald-500/40 shadow-md"
                 >
-                  <Twitter size={20} />
+                  <FaTwitter size={20} />
+                </a>
+
+                {/* WhatsApp */}
+                <a
+                  href="https://wa.me/93731945209"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-800 rounded-lg hover:bg-emerald-500 hover:text-black transition hover:shadow-emerald-500/40 shadow-md"
+                >
+                  <FaWhatsapp size={20} />
+                </a>
+
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/share/17FD89TPQp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-800 rounded-lg hover:bg-emerald-500 hover:text-black transition hover:shadow-emerald-500/40 shadow-md"
+                >
+                  <FaFacebook size={20} />
                 </a>
               </div>
             </div>

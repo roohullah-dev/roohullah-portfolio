@@ -77,7 +77,7 @@ export default function Hero() {
           className="text-center lg:text-left bg"
         >
           {/* Badge */}
-          <span className="inline-block  px-4 py-2 rounded-full bg-green-500/10 text-green-400 text-sm">
+          <span className="inline-block  px-4 py-2 rounded-full bg-green-500/10 text-green-400 text-sm ">
             👋 Hello, I'm Roohullah
           </span>
 
@@ -87,10 +87,6 @@ export default function Hero() {
               <span className="animate-pulse">|</span>
             </span>
           </h1>
-          {/* Paragraph */}
-          {/* <p className=" font-body text-gray-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed mb-8 sm:mb-4 md:mb-6 sm:text-justify md:text-justify">
-            
-          </p> */}
           <p className="font-body text-gray-400 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed mb-8 sm:mb-4 md:mb-6 text-justify">
             I’m a Front-End Developer and Python Automation & Web Scraping
             Specialist. I build responsive websites and smart automation — from
