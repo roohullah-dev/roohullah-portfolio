@@ -180,7 +180,7 @@ export default function Skills() {
           mx-auto mt-12 sm:mt-16
           max-w-7xl
           grid gap-6
-          px-4 sm:px-6 lg:px-10
+          px-5 sm:px-6 lg:px-10
           grid-cols-1 md:grid-cols-2 lg:grid-cols-3
         "
       >

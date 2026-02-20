@@ -63,7 +63,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="relative z-10 bg-black/80 py-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-5">
         {/* Section Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

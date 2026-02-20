@@ -7,7 +7,7 @@ const testimonials = [
     name: "Alice Johnson",
     role: "Product Manager",
     feedback:
-      "Working with [Your Name] was an absolute pleasure. The web application was delivered on time, fully responsive, and exceeded our expectations.",
+      "Working with Roohullah was an absolute pleasure. The web application was delivered on time, fully responsive, and exceeded our expectations.",
     rating: 5,
     avatar: "https://i.pravatar.cc/200?img=32",
   },
@@ -16,12 +16,12 @@ const testimonials = [
     role: "CEO, TechCorp",
     feedback:
       "Exceptional front-end development skills! Attention to detail, clean code, and great communication throughout the project.",
-    rating: 5,
+    rating: 4.5,
     avatar: "https://i.pravatar.cc/200?img=12",
   },
   {
     name: "Sophia Lee",
-    role: "UX Designer",
+    role: "Project Manager",
     feedback:
       "The UI/UX design was seamless and visually stunning. Truly elevated the user experience of our platform.",
     rating: 5,
@@ -32,7 +32,7 @@ const testimonials = [
     role: "Founder, StartupX",
     feedback:
       "Professional and reliable! The components were reusable and visually stunning. Highly recommended.",
-    rating: 5,
+    rating: 4.8,
     avatar: "https://i.pravatar.cc/200?img=18",
   },
 ];

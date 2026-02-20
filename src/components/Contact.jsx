@@ -44,7 +44,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative z-10 bg-black/80 py-24">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-5">
         {/* Header */}
         <div className="text-center mb-14">
           <h2

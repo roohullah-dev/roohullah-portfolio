@@ -132,12 +132,7 @@ export default function Navbar() {
               overflow-hidden
             "
           >
-            <div
-              className="
-                flex flex-col gap-4 
-                px-6 py-5
-              "
-            >
+            <div className="flex flex-col gap-4 px-6 py-5 text-center">
               {navItems.map((item) => (
                 <motion.button
                   key={item.id}
@@ -145,7 +140,6 @@ export default function Navbar() {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleScroll(item.id)}
                   className="
-                    text-left 
                     hover:text-green-400 
                     transition cursor-pointer 
                     py-2 text-sm
