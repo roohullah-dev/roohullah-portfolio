@@ -1,7 +1,65 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const projectsData = [
+  {
+    id: 6,
+    title: "Amazon Scraping Engine",
+    category: "Python Automation & Scraping",
+    description:
+      "Enterprise-grade Amazon scraping automation with intelligent captcha handling.",
+    img: "https://img.freepik.com/free-photo/3d-delivery-robot-working_23-2151150149.jpg?t=st=1771501230~exp=1771504830~hmac=26ac75806ff5e3e05385b32e567f4dbbe47f6a7228718eeb7a82f6b1c62e2a16&w=1480",
+    link: "https://roohullah-dev.github.io/amazon_scraping_Tool/",
+  },
+
+  {
+    id: 5,
+    title: "Youtube Multiple Downloader",
+    category: "Python Automation & Scraping",
+    description: "A personal portfolio website showcasing projects and skills.",
+    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+    link: "https://your-ecommerce-demo.com",
+  },
+
+  {
+    id: 7,
+    title: "Ali Express Scraping Tool",
+    category: "Python Automation & Scraping",
+    description:
+      "Automated AliExpress high-resolution product image scraping using intelligent Selenium automation",
+    img: "https://img.freepik.com/free-vector/isometric-e-commerce-design_23-2148559624.jpg",
+    link: "https://roohullah-dev.github.io/AliExpress_Media_Scraper/",
+  },
+
+  {
+    id: 8,
+    title: "UltraCodeX Automation Engine",
+    category: "Python Automation & Scraping",
+    description:
+      "Custom Python script engine delivering powerful automation, data processing, and workflow solutions.",
+    img: "https://img.freepik.com/free-photo/3d-rendering-biorobots-concept_23-2149524400.jpg?t=st=1771501485~exp=1771505085~hmac=7d6a9c92dfdf326ff47e038487a7feebca66956017245809a5b456b1cd3283ea&w=1480",
+    link: "https://roohullah-dev.github.io/ultraCodeX/",
+  },
+
+  {
+    id: 10,
+    title: "Auto Email Reminder",
+    category: "Python Automation & Scraping",
+    description:
+      "Smart automated invoice reminder system powered by Python and Google Sheets",
+    img: "https://img.freepik.com/free-vector/email-notification-icon-isolated-white-background-vector-cartoon-illustration-envelope-with-letter-computer-screen-new-message-received-inbox-alert-business-software-design-element_107791-23706.jpg?t=st=1771500802~exp=1771504402~hmac=56574f55189b47ab6e6a9a5e10ed850497d73de507bd105ac4d11fd33c088079&w=1480",
+    link: "https://roohullah-dev.github.io/Auto-Email-Reminder-System/",
+  },
+
+  {
+    id: 4,
+    title: "Portfolio Website",
+    category: "Python Automation & Scraping",
+    description: "A personal portfolio website showcasing projects and skills.",
+    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+    link: "https://your-ecommerce-demo.com",
+  },
+
   {
     id: 1,
     title: "E-commerce Store",
@@ -30,63 +88,6 @@ const projectsData = [
   },
 
   {
-    id: 4,
-    title: "Portfolio Website",
-    category: "Python Automation & Scraping",
-    description: "A personal portfolio website showcasing projects and skills.",
-    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
-    link: "https://your-ecommerce-demo.com",
-  },
-
-  {
-    id: 5,
-    title: "Youtube Multiple Downloader",
-    category: "Python Automation & Scraping",
-    description: "A personal portfolio website showcasing projects and skills.",
-    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
-    link: "https://your-ecommerce-demo.com",
-  },
-
-  {
-    id: 6,
-    title: "Amazon Scraping Engine",
-    category: "Python Automation & Scraping",
-    description:
-      "Enterprise-grade Amazon scraping automation with intelligent captcha handling.",
-    img: "https://img.freepik.com/free-photo/3d-delivery-robot-working_23-2151150149.jpg?t=st=1771501230~exp=1771504830~hmac=26ac75806ff5e3e05385b32e567f4dbbe47f6a7228718eeb7a82f6b1c62e2a16&w=1480",
-    link: "https://roohullah-dev.github.io/amazon_scraping_Tool/",
-  },
-
-  {
-    id: 7,
-    title: "Ali Express Scraping Tool",
-    category: "Python Automation & Scraping",
-    description:
-      "Automated AliExpress high-resolution product image scraping using intelligent Selenium automation",
-    img: "https://img.freepik.com/free-vector/isometric-e-commerce-design_23-2148559624.jpg",
-    link: "https://roohullah-dev.github.io/AliExpress_Media_Scraper/",
-  },
-
-  {
-    id: 8,
-    title: "UltraCodeX Automation Engine",
-    category: "Python Automation & Scraping",
-    description:
-      "Custom Python script engine delivering powerful automation, data processing, and workflow solutions.",
-    img: "https://img.freepik.com/free-photo/3d-rendering-biorobots-concept_23-2149524400.jpg?t=st=1771501485~exp=1771505085~hmac=7d6a9c92dfdf326ff47e038487a7feebca66956017245809a5b456b1cd3283ea&w=1480",
-    link: "https://roohullah-dev.github.io/ultraCodeX/",
-  },
-  {
-    id: 10,
-    title: "Auto Email Reminder",
-    category: "Python Automation & Scraping",
-    description:
-      "Smart automated invoice reminder system powered by Python and Google Sheets",
-    img: "https://img.freepik.com/free-vector/email-notification-icon-isolated-white-background-vector-cartoon-illustration-envelope-with-letter-computer-screen-new-message-received-inbox-alert-business-software-design-element_107791-23706.jpg?t=st=1771500802~exp=1771504402~hmac=56574f55189b47ab6e6a9a5e10ed850497d73de507bd105ac4d11fd33c088079&w=1480",
-    link: "https://roohullah-dev.github.io/Auto-Email-Reminder-System/",
-  },
-
-  {
     id: 11,
     title: "Full Stack Blog",
     category: "Interactive Web Apps",
@@ -104,7 +105,6 @@ const projectsData = [
     img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
     link: "https://your-ecommerce-demo.com",
   },
-
   {
     id: 13,
     title: "Dashboard UI Kit",
@@ -133,6 +133,7 @@ const projectsData = [
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(6);
 
   const categories = [
     "All",
@@ -145,6 +146,12 @@ export default function Projects() {
     filter === "All"
       ? projectsData
       : projectsData.filter((p) => p.category === filter);
+
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+
+  useEffect(() => {
+    setVisibleCount(6);
+  }, [filter]);
 
   return (
     <section
@@ -159,28 +166,17 @@ export default function Projects() {
           transition={{ duration: 0.7 }}
           className="text-center mb-12 sm:mb-14"
         >
-          <h2
-            className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl
-              font-bold leading-snug
-              text-white mb-6"
-          >
+          <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-bold leading-snug text-white mb-6">
             My <span className="text-emerald-500">Projects</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
             A showcase of my work, featuring Python automation projects, web
-            scraping solutions, and responsive web applications. Use the filters
-            to explore each category and see how I turn ideas into high-impact
-            digital solutions.
+            scraping solutions, and responsive web applications.
           </p>
         </motion.div>
 
         {/* Filter Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 flex-wrap"
-        >
+        <motion.div className="flex justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -197,36 +193,25 @@ export default function Projects() {
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {filteredProjects.map((project) => (
+        <motion.div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {visibleProjects.map((project) => (
             <motion.a
               key={project.id}
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
               className="relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group block"
-              whileHover={{
-                scale: 1.03,
-              }}
+              whileHover={{ scale: 1.03 }}
             >
-              {/* Project Image */}
               <img
                 src={project.img}
                 alt={project.title}
                 className="w-full h-56 sm:h-60 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
-              {/* Sliding Overlay */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 p-6">
-                {/* Dark layer behind text */}
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-sm rounded-2xl"></div>
 
-                {/* Content */}
                 <span className="absolute top-4 left-1/2 -translate-x-1/2 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium z-10">
                   {project.category}
                 </span>
@@ -240,6 +225,18 @@ export default function Projects() {
             </motion.a>
           ))}
         </motion.div>
+
+        {/* Load More Button */}
+        {visibleCount < filteredProjects.length && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => setVisibleCount((prev) => prev + 6)}
+              className="px-6 py-3 rounded-full bg-green-500 text-black font-semibold hover:bg-green-400 transition text-sm sm:text-base cursor-pointer"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

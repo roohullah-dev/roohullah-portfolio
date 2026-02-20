@@ -9,6 +9,7 @@ const projectsData = [
     description:
       "A modern e-commerce platform with product listings, cart, and secure checkout.",
     img: "https://images.unsplash.com/photo-1605379399642-870262d3d051",
+    link: "https://your-ecommerce-demo.com",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const projectsData = [
     category: "UI Components",
     description: "A clean and reusable dashboard UI kit for fast prototyping.",
     img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
+    link: "https://your-ecommerce-demo.com",
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const projectsData = [
     description:
       "A full stack blogging platform with authentication, posts, and comments.",
     img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
+    link: "https://your-ecommerce-demo.com",
   },
 
   {
@@ -32,6 +35,7 @@ const projectsData = [
     category: "Python Automation & Scraping",
     description: "A personal portfolio website showcasing projects and skills.",
     img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+    link: "https://your-ecommerce-demo.com",
   },
 
   {
@@ -40,37 +44,46 @@ const projectsData = [
     category: "Python Automation & Scraping",
     description: "A personal portfolio website showcasing projects and skills.",
     img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+    link: "https://your-ecommerce-demo.com",
   },
 
   {
     id: 6,
     title: "Amazon Scraping Engine",
     category: "Python Automation & Scraping",
-    description: "A personal portfolio website showcasing projects and skills.",
-    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+    description:
+      "Enterprise-grade Amazon scraping automation with intelligent captcha handling.",
+    img: "https://img.freepik.com/free-photo/3d-delivery-robot-working_23-2151150149.jpg?t=st=1771501230~exp=1771504830~hmac=26ac75806ff5e3e05385b32e567f4dbbe47f6a7228718eeb7a82f6b1c62e2a16&w=1480",
+    link: "https://roohullah-dev.github.io/amazon_scraping_Tool/",
   },
 
   {
     id: 7,
     title: "Ali Express Scraping Tool",
     category: "Python Automation & Scraping",
-    description: "A personal portfolio website showcasing projects and skills.",
-    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+    description:
+      "Automated AliExpress high-resolution product image scraping using intelligent Selenium automation",
+    img: "https://img.freepik.com/free-vector/isometric-e-commerce-design_23-2148559624.jpg",
+    link: "https://roohullah-dev.github.io/AliExpress_Media_Scraper/",
   },
 
   {
     id: 8,
-    title: "UltraCodeX Custom Script",
+    title: "UltraCodeX Automation Engine",
     category: "Python Automation & Scraping",
-    description: "A personal portfolio website showcasing projects and skills.",
-    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+    description:
+      "Custom Python script engine delivering powerful automation, data processing, and workflow solutions.",
+    img: "https://img.freepik.com/free-photo/3d-rendering-biorobots-concept_23-2149524400.jpg?t=st=1771501485~exp=1771505085~hmac=7d6a9c92dfdf326ff47e038487a7feebca66956017245809a5b456b1cd3283ea&w=1480",
+    link: "https://roohullah-dev.github.io/ultraCodeX/",
   },
   {
     id: 10,
     title: "Auto Email Reminder",
     category: "Python Automation & Scraping",
-    description: "A personal portfolio website showcasing projects and skills.",
-    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+    description:
+      "Smart automated invoice reminder system powered by Python and Google Sheets",
+    img: "https://img.freepik.com/free-vector/email-notification-icon-isolated-white-background-vector-cartoon-illustration-envelope-with-letter-computer-screen-new-message-received-inbox-alert-business-software-design-element_107791-23706.jpg?t=st=1771500802~exp=1771504402~hmac=56574f55189b47ab6e6a9a5e10ed850497d73de507bd105ac4d11fd33c088079&w=1480",
+    link: "https://roohullah-dev.github.io/Auto-Email-Reminder-System/",
   },
 
   {
@@ -80,6 +93,7 @@ const projectsData = [
     description:
       "A full stack blogging platform with authentication, posts, and comments.",
     img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
+    link: "https://your-ecommerce-demo.com",
   },
   {
     id: 12,
@@ -88,6 +102,7 @@ const projectsData = [
     description:
       "A full stack blogging platform with authentication, posts, and comments.",
     img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
+    link: "https://your-ecommerce-demo.com",
   },
 
   {
@@ -96,6 +111,7 @@ const projectsData = [
     category: "UI Components",
     description: "A clean and reusable dashboard UI kit for fast prototyping.",
     img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
+    link: "https://your-ecommerce-demo.com",
   },
   {
     id: 14,
@@ -103,6 +119,7 @@ const projectsData = [
     category: "UI Components",
     description: "A clean and reusable dashboard UI kit for fast prototyping.",
     img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
+    link: "https://your-ecommerce-demo.com",
   },
   {
     id: 15,
@@ -110,6 +127,7 @@ const projectsData = [
     category: "UI Components",
     description: "A clean and reusable dashboard UI kit for fast prototyping.",
     img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
+    link: "https://your-ecommerce-demo.com",
   },
 ];
 
@@ -133,7 +151,7 @@ export default function Projects() {
       id="projects"
       className="relative z-10 bg-black/80 py-16 sm:py-20 lg:py-28"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10">
         {/* Title & Description */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -186,9 +204,15 @@ export default function Projects() {
           className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
           {filteredProjects.map((project) => (
-            <motion.div
+            <motion.a
               key={project.id}
-              className="relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group block"
+              whileHover={{
+                scale: 1.03,
+              }}
             >
               {/* Project Image */}
               <img
@@ -213,7 +237,7 @@ export default function Projects() {
                   {project.description}
                 </p>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
       </div>
