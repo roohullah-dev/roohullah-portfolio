@@ -14,10 +14,11 @@ const projectsData = [
 
   {
     id: 5,
-    title: "Youtube Multiple Downloader",
+    title: "YouTube HD Downloader – Python",
     category: "Python Automation & Scraping",
-    description: "A personal portfolio website showcasing projects and skills.",
-    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
+    description:
+      "Automates downloading YouTube videos and playlists, merging audio-video into high-quality HD files.",
+    img: "https://img.freepik.com/free-photo/pile-3d-play-button-logos_1379-880.jpg",
     link: "https://your-ecommerce-demo.com",
   },
 
@@ -53,11 +54,12 @@ const projectsData = [
 
   {
     id: 4,
-    title: "Portfolio Website",
+    title: "WoodworkerExpress Data Scraping Engine",
     category: "Python Automation & Scraping",
-    description: "A personal portfolio website showcasing projects and skills.",
-    img: "https://images.unsplash.com/photo-1612831455598-96c0f5b6b4fa",
-    link: "https://your-ecommerce-demo.com",
+    description:
+      "Enterprise-grade Python scraper extracting structured product data efficiently from WoodworkerExpress.",
+    img: "https://img.freepik.com/free-photo/person-working-wood-working-industry-factory_23-2151352618.jpg",
+    link: "https://roohullah-dev.github.io/woodworker_Engine/",
   },
 
   {
