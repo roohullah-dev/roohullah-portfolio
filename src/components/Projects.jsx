@@ -64,29 +64,30 @@ const projectsData = [
 
   {
     id: 1,
-    title: "E-commerce Store",
+    title: "NexoraDigital – Digital Growth",
     category: "Interactive Web Apps",
     description:
-      "A modern e-commerce platform with product listings, cart, and secure checkout.",
-    img: "https://images.unsplash.com/photo-1605379399642-870262d3d051",
-    link: "https://your-ecommerce-demo.com",
+      "A responsive website offering branding, web design, and marketing solutions.",
+    img: "https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041855.jpg?t=st=1771729533~exp=1771733133~hmac=09a2a2bbeb36acacefea54b461fb75aac29a628487267ee25e32c6f16235a3a5&w=1480",
+    link: "https://nexora-digital-seven.vercel.app/",
   },
   {
     id: 2,
-    title: "Dashboard UI Kit",
-    category: "UI Components",
-    description: "A clean and reusable dashboard UI kit for fast prototyping.",
-    img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
-    link: "https://your-ecommerce-demo.com",
+    title: "Anon – Fashion E-Commerce Website",
+    category: "Interactive Web Apps",
+    description:
+      "A responsive e-commerce website showcasing clothing, accessories, and trending fashion products.",
+    img: "https://img.freepik.com/free-photo/composition-clothes-accessories-suitcase_23-2149064271.jpg",
+    link: "https://anon-self.vercel.app/",
   },
   {
     id: 3,
-    title: "Full Stack Blog",
+    title: "Luxenest – Luxury Real Estate Website",
     category: "Interactive Web Apps",
     description:
-      "A full stack blogging platform with authentication, posts, and comments.",
-    img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
-    link: "https://your-ecommerce-demo.com",
+      "responsive website showcasing luxury homes and exclusive real estate experiences.",
+    img: "https://img.freepik.com/free-photo/3d-rendering-abstract-building_23-2150896700.jpg?t=st=1771731720~exp=1771735320~hmac=a89946bdf85449c1ec2abcf8afd6321ec5b80fba37e86f971c102fa93f93da98&w=1480",
+    link: "https://luxe-nest-nine.vercel.app/",
   },
 
   {

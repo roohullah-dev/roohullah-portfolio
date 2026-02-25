@@ -165,7 +165,7 @@ export default function Hero() {
             {/* Profile Image */}
             <div className="absolute inset-[14px] rounded-full overflow-hidden border border-green-400/30 shadow-2xl">
               <img
-                src="/RoohullahPic.JPG"
+                src="/RoohullahPic.PNG"
                 alt="Roohullah"
                 className="w-full h-full object-cover"
               />
