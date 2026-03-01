@@ -112,7 +112,7 @@ const Contact = () => {
                 ${
                   loading
                     ? "bg-gray-600 cursor-not-allowed opacity-60"
-                    : "bg-gradient-to-r from-emerald-500 to-emerald-600 hover:scale-105 hover:shadow-emerald-500/40 shadow-lg"
+                    : "bg-gradient-to-r from-emerald-500 to-emerald-600 hover:scale-105 hover:shadow-emerald-500/40 shadow-lg cursor-pointer"
                 }`}
               >
                 {loading ? "Sending..." : "Send Message"}
@@ -207,24 +207,24 @@ const Contact = () => {
                 </a>
 
                 {/* LinkedIn */}
-                <a
+                {/* <a
                   href="https://linkedin.com/in/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-800 rounded-lg hover:bg-emerald-500 hover:text-black transition hover:shadow-emerald-500/40 shadow-md"
                 >
                   <FaLinkedin size={20} />
-                </a>
+                </a> */}
 
                 {/* Twitter */}
-                <a
+                {/* <a
                   href="https://twitter.com/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-800 rounded-lg hover:bg-emerald-500 hover:text-black transition hover:shadow-emerald-500/40 shadow-md"
                 >
                   <FaTwitter size={20} />
-                </a>
+                </a> */}
 
                 {/* WhatsApp */}
                 <a

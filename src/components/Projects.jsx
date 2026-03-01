@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 
 const projectsData = [
   {
+    id: 1,
+    title: "NexoraDigital – Digital Growth",
+    category: "Interactive Web Apps",
+    description:
+      "A responsive website offering branding, web design, and marketing solutions.",
+    img: "https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041855.jpg?t=st=1771729533~exp=1771733133~hmac=09a2a2bbeb36acacefea54b461fb75aac29a628487267ee25e32c6f16235a3a5&w=1480",
+    link: "https://nexora-digital-seven.vercel.app/",
+  },
+  {
     id: 6,
     title: "Amazon Scraping Engine",
     category: "Python Automation & Scraping",
@@ -13,12 +22,31 @@ const projectsData = [
   },
 
   {
+    id: 3,
+    title: "Luxenest – Luxury Real Estate Website",
+    category: "Interactive Web Apps",
+    description:
+      "responsive website showcasing luxury homes and exclusive real estate experiences.",
+    img: "https://img.freepik.com/free-photo/3d-rendering-abstract-building_23-2150896700.jpg?t=st=1771731720~exp=1771735320~hmac=a89946bdf85449c1ec2abcf8afd6321ec5b80fba37e86f971c102fa93f93da98&w=1480",
+    link: "https://luxe-nest-nine.vercel.app/",
+  },
+
+  {
     id: 5,
     title: "YouTube HD Downloader – Python",
     category: "Python Automation & Scraping",
     description:
       "Automates downloading YouTube videos and playlists, merging audio-video into high-quality HD files.",
     img: "https://img.freepik.com/free-photo/pile-3d-play-button-logos_1379-880.jpg",
+    link: "https://your-ecommerce-demo.com",
+  },
+
+  {
+    id: 14,
+    title: "Dashboard UI Kit",
+    category: "UI Components",
+    description: "A clean and reusable dashboard UI kit for fast prototyping.",
+    img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
     link: "https://your-ecommerce-demo.com",
   },
 
@@ -63,14 +91,15 @@ const projectsData = [
   },
 
   {
-    id: 1,
-    title: "NexoraDigital – Digital Growth",
-    category: "Interactive Web Apps",
+    id: 13,
+    title: "Premium Pricing UI",
+    category: "UI Components",
     description:
-      "A responsive website offering branding, web design, and marketing solutions.",
-    img: "https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041855.jpg?t=st=1771729533~exp=1771733133~hmac=09a2a2bbeb36acacefea54b461fb75aac29a628487267ee25e32c6f16235a3a5&w=1480",
-    link: "https://nexora-digital-seven.vercel.app/",
+      "Modern responsive pricing component built with React, Tailwind, and Motion.",
+    img: "https://img.freepik.com/free-photo/business-man-counting-dollar-banknote-online-business-concept_1150-6406.jpg?t=st=1772401400~exp=1772405000~hmac=50ffa948785512c8e1b94f5a36d512c64ff9ccd88c8e7e82eaa131b0c97518e1&w=1480",
+    link: "https://primium-pricing-ui.vercel.app/",
   },
+
   {
     id: 2,
     title: "Anon – Fashion E-Commerce Website",
@@ -80,58 +109,35 @@ const projectsData = [
     img: "https://img.freepik.com/free-photo/composition-clothes-accessories-suitcase_23-2149064271.jpg",
     link: "https://anon-self.vercel.app/",
   },
-  {
-    id: 3,
-    title: "Luxenest – Luxury Real Estate Website",
-    category: "Interactive Web Apps",
-    description:
-      "responsive website showcasing luxury homes and exclusive real estate experiences.",
-    img: "https://img.freepik.com/free-photo/3d-rendering-abstract-building_23-2150896700.jpg?t=st=1771731720~exp=1771735320~hmac=a89946bdf85449c1ec2abcf8afd6321ec5b80fba37e86f971c102fa93f93da98&w=1480",
-    link: "https://luxe-nest-nine.vercel.app/",
-  },
+
+  // {
+  //   id: 11,
+  //   title: "Full Stack Blog",
+  //   category: "Interactive Web Apps",
+  //   description:
+  //     "A full stack blogging platform with authentication, posts, and comments.",
+  //   img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
+  //   link: "https://your-ecommerce-demo.com",
+  // },
+  // {
+  //   id: 12,
+  //   title: "Full Stack Blog",
+  //   category: "Interactive Web Apps",
+  //   description:
+  //     "A full stack blogging platform with authentication, posts, and comments.",
+  //   img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
+  //   link: "https://your-ecommerce-demo.com",
+  // },
 
   {
-    id: 11,
-    title: "Full Stack Blog",
-    category: "Interactive Web Apps",
+    id: 15,
+    title: "MotionCraft UI",
+    category: "UI Components",
     description:
-      "A full stack blogging platform with authentication, posts, and comments.",
-    img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
-    link: "https://your-ecommerce-demo.com",
+      "Complete animated interface system with immersive components and smooth transitions.",
+    img: "https://img.freepik.com/free-vector/gradient-ui-ux-elements-background_23-2149056159.jpg?t=st=1772396497~exp=1772400097~hmac=f8deac8001287d75623e93d9ef4f578d5d7cd4310b6e0ce205e45ee97c9d948e&w=1480",
+    link: "https://premium-ui-components.vercel.app/",
   },
-  {
-    id: 12,
-    title: "Full Stack Blog",
-    category: "Interactive Web Apps",
-    description:
-      "A full stack blogging platform with authentication, posts, and comments.",
-    img: "https://images.unsplash.com/photo-1612832021096-1c8c0c9d1f88",
-    link: "https://your-ecommerce-demo.com",
-  },
-  // {
-  //   id: 13,
-  //   title: "Dashboard UI Kit",
-  //   category: "UI Components",
-  //   description: "A clean and reusable dashboard UI kit for fast prototyping.",
-  //   img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
-  //   link: "https://your-ecommerce-demo.com",
-  // },
-  // {
-  //   id: 14,
-  //   title: "Dashboard UI Kit",
-  //   category: "UI Components",
-  //   description: "A clean and reusable dashboard UI kit for fast prototyping.",
-  //   img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
-  //   link: "https://your-ecommerce-demo.com",
-  // },
-  // {
-  //   id: 15,
-  //   title: "Dashboard UI Kit",
-  //   category: "UI Components",
-  //   description: "A clean and reusable dashboard UI kit for fast prototyping.",
-  //   img: "https://images.unsplash.com/photo-1612831455544-04ebf5f6b2d8",
-  //   link: "https://your-ecommerce-demo.com",
-  // },
 ];
 
 export default function Projects() {

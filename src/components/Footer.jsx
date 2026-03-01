@@ -7,7 +7,7 @@ export default function Footer() {
           {/* About (Wider Column) */}
           <div className="flex-[2]">
             <h3 className="text-white text-xl font-bold mb-4">About Me</h3>
-            <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-left">
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-justify">
               Crafting modern, responsive websites and intelligent automation
               solutions with precision and efficiency. From front-end
               development to Python-based automation and web scraping, I focus
@@ -54,7 +54,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/resume.pdf"
+                  href="/Roohullah_CV.pdf"
                   className="hover:text-emerald-500 transition-colors"
                 >
                   Resume

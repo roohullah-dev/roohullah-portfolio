@@ -32,7 +32,7 @@ export default function About() {
               mx-auto md:mx-0
             "
           >
-            &lt;/&gt; Front-end Developer
+            &lt;/&gt; Front-end Developer & Automation Expert
           </span>
 
           <h2
@@ -95,8 +95,8 @@ export default function About() {
           >
             {[
               { value: "45+", label: "Happy Clients" },
-              { value: "2.5K+", label: "Code Commits" },
-              { value: "500+", label: "GitHub Stars" },
+              { value: "500+", label: "Code Commits" },
+              { value: "300+", label: "GitHub Stars" },
             ].map((item) => (
               <div
                 key={item.label}

@@ -110,7 +110,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => handleScroll("contact")}
-              className="border border-green-400 text-green-400 px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-400 hover:text-black transition"
+              className="border border-green-400 text-green-400 px-6 py-3 rounded-lg text-sm font-medium hover:bg-green-400 hover:text-black transition cursor-pointer"
             >
               Hire Me
             </motion.button>
@@ -150,7 +150,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex justify-center lg:justify-end"
         >
-          <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square">
+          <div className="relative w-[300px] sm:w-[360px] md:w-[420px] aspect-square ">
             {/* Soft Green Glow */}
             <div className="absolute inset-0 rounded-full bg-green-500/20 blur-3xl scale-110"></div>
 
@@ -167,7 +167,7 @@ export default function Hero() {
               <img
                 src="/RoohullahPic.png"
                 alt="Roohullah"
-                className="w-full h-full object-cover"
+                className="w-full h-max object-cover"
               />
             </div>
 
